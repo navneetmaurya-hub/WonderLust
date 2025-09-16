@@ -1,0 +1,29 @@
+
+<% layout("layouts/boillerplate") %>
+
+<div class="row mt-4">
+  <div class="col-6 offset-3">
+    <h3 class="mb-3">Login</h3>
+
+    <% if(error && error.length > 0) { %>
+      <div class="alert alert-danger">
+        <%= error %>
+      </div>
+    <% } %>
+
+    <form action="/login" method="POST">
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" name="username" id="username" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" name="password" id="password" class="form-control" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </div>
+</div>
+
+
